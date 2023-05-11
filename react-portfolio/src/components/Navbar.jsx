@@ -5,16 +5,16 @@ export default function Navbar() {
         <header>
             <ul className="nav-links">
                 <li className="nav-link">
-                    <a href="">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li className="nav-link">
-                    <a href="">Projects</a>
+                    <a href="#projects">Projects</a>
                 </li>
                 <li className="nav-link">
-                    <a href="">Skills</a>
+                    <a href="#skills">Skills</a>
                 </li>
                 <li className="nav-link">
-                    <a href="">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </header>
