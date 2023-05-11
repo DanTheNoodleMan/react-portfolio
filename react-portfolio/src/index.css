@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -25,7 +29,7 @@ body {
     align-items: center;
     min-width: 320px;
     min-height: 100vh;
-    background-color: var(--bg);
+    background-color: green;
 }
 
 header {
@@ -51,7 +55,7 @@ a {
     text-decoration: inherit;
 }
 a:hover {
-  font-weight: bold;
+    font-weight: bold;
     background: linear-gradient(
         to right,
         var(--purple-2) 20%,
@@ -67,12 +71,12 @@ a:hover {
     animation: textShine 1.5s ease-in-out infinite alternate;
 }
 @keyframes textShine {
-  0% {
-      background-position: 0% 50%;
-  }
-  100% {
-      background-position: 100% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 h1 {
@@ -87,12 +91,11 @@ li {
     list-style: none;
 }
 
-.hero{
-
+.hero {
 }
 
 b {
-  font-weight: bold;
+    font-weight: bold;
     background: linear-gradient(
         to right,
         var(--purple-2) 10%,
@@ -108,10 +111,10 @@ b {
     animation: textShine 4s ease-in-out infinite alternate;
 }
 @keyframes textShine {
-  0% {
-      background-position: 0% 50%;
-  }
-  100% {
-      background-position: 100% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
