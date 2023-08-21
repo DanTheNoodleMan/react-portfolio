@@ -1,29 +1,58 @@
 nav {
-    background: var(--primary);
+    background: #211F1C;
     position: fixed;
     top: 0;
     left: 0;
     width: 20%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 2em;
 }
 
 .nav-links {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    align-items: center;
+    gap: 1rem;
     font-size: 1.25em;
-    padding:0;
+    padding: 0;
 }
 
 a {
-    font-weight: 700;
+    font-weight: 300;
     text-decoration: inherit;
+    text-transform: uppercase;
+
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    position: relative;
 }
+
+a::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--purple-2);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 a:hover {
-    font-weight: bold;
+    font-weight: 500;
     background: linear-gradient(
         to right,
         var(--purple-2) 20%,
@@ -46,8 +75,7 @@ a:hover {
         background-position: 100% 50%;
     }
 }
-
-h1 {
+.hero-title {
     font-size: 4.5em;
     line-height: 1.1;
     color: var(--purple-2);
@@ -59,8 +87,7 @@ li {
     list-style: none;
 }
 
-
-b {
+.shine {
     font-weight: bold;
     background: linear-gradient(
         to right,
@@ -83,4 +110,35 @@ b {
     100% {
         background-position: 100% 50%;
     }
+}
+
+.photo-section {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+.photo-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--purple-1);
+    object-fit: cover;
+    object-position: top;
+}
+
+.photo-section h1 {
+    font-size: 1.6em;
+    color: var(--purple-2);
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.position {
+    margin: 0;
+    font-weight: 300;
+    color: rgb(237, 237, 237);
 }
