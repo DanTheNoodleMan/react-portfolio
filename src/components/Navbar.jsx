@@ -1,8 +1,9 @@
 import React from "react";
+import "../assets/css/navbar.css";
 
 export default function Navbar() {
     return (
-        <header>
+        <nav>
             <ul className="nav-links">
                 <li className="nav-link">
                     <a href="#about">About</a>
@@ -17,6 +18,6 @@ export default function Navbar() {
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
-        </header>
+        </nav>
     );
 }
