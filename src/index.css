@@ -1,5 +1,6 @@
 :root {
-    font-family: "Open Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", Inter, system-ui, Avenir, Helvetica, Arial,
+        sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
@@ -18,14 +19,43 @@
     --bg: #fffbf5;
     --primary: #f7efe5;
     --purple-1: #ca9ce5;
-    --purple-2: #834cb3;
+    --purple-2: #704495;
+    --green-1: #00e0b0;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     min-width: 320px;
-    background-color: #14110F;
-    height:100svh;
+    background-color: #000;
+    height: 100svh;
 }
 
+section {
+    height: 100vh;
+}
 
+.shine {
+    font-weight: bold;
+    background: linear-gradient(
+        to right,
+        var(--green-1) 20%,
+        var(--purple-1) 40%,
+        #9f5ff4 70%,
+        #9f5ff4 90%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 500% auto;
+    animation: textShine 4s ease-in-out infinite alternate;
+}
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}

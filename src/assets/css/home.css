@@ -1,0 +1,58 @@
+#home{
+    background: url(../../src/assets/sexy1.jpg);
+    background-size: 45%;
+    background-position: 110%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero{
+    height: 100%;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left:4em;
+}
+
+.hero h1 {
+    font-size: 4.5em;
+    line-height: 1.1;
+    margin-bottom: 0.1em;
+}
+
+.hero h3 {
+    font-weight: 400;
+}
+.tech-stack{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tech-stack ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+}
+.tech-stack ul li {
+    font-size: 1.75em;
+    color:var(--green-1);
+    display: flex;
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed 
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+*/

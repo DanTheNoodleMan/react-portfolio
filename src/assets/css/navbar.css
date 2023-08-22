@@ -1,5 +1,5 @@
-nav {
-    background: #211F1C;
+.sidebar {
+    background: #14110f;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,6 +9,11 @@ nav {
     flex-direction: column;
     align-items: center;
     padding-top: 2em;
+}
+
+footer {
+    padding: 1.5em;
+    text-align: center;
 }
 
 .nav-links {
@@ -22,13 +27,14 @@ nav {
 }
 
 a {
+    color: var(--green-1);
     font-weight: 300;
     text-decoration: inherit;
     text-transform: uppercase;
 
     text-decoration: none;
     letter-spacing: 0.15em;
-    
+
     display: inline-block;
     position: relative;
 }
@@ -47,6 +53,11 @@ a::after {
 }
 
 a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.active::after {
     width: 100%;
     left: 0;
 }
@@ -87,31 +98,6 @@ li {
     list-style: none;
 }
 
-.shine {
-    font-weight: bold;
-    background: linear-gradient(
-        to right,
-        var(--purple-2) 10%,
-        var(--purple-1) 30%,
-        #9f5ff4 70%,
-        #6a3c92 90%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    background-size: 500% auto;
-    animation: textShine 4s ease-in-out infinite alternate;
-}
-@keyframes textShine {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
 .photo-section {
     max-width: 100%;
     display: flex;
@@ -119,6 +105,7 @@ li {
     align-items: center;
     justify-content: flex-start;
     padding: 1rem;
+    text-align: center;
 }
 
 .photo-section img {
@@ -133,7 +120,6 @@ li {
 .photo-section h1 {
     font-size: 1.6em;
     color: var(--purple-2);
-    text-align: left;
     margin-bottom: 0;
 }
 

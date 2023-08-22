@@ -1,0 +1,47 @@
+import React from "react";
+import "../assets/css/home.css";
+import { IoLogoHtml5 } from "react-icons/io5";
+import { IoLogoCss3 } from "react-icons/io5";
+import { IoLogoJavascript } from "react-icons/io5";
+import { IoLogoNodejs } from "react-icons/io5";
+import { FaJava } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { IoLogoReact } from "react-icons/io5";
+import { SiMysql } from "react-icons/si";
+import { SiSqlite } from "react-icons/si";
+import { SiBootstrap } from "react-icons/si";
+
+export default function Home() {
+    return (
+        <section id="home">
+            <div className="hero">
+                <h1> Hi!
+                    I'm{" "}
+                    <span className="shine">
+                        Daniel <br /> Robertson
+                    </span>
+                </h1>
+                <h3>
+                    I'm a <span className="shine">Fullstack Developer</span>{" "}
+                    driven by my passion for mixing art and engineering to
+                    create beautiful and functional tech solutions.
+                </h3>
+                <div className="tech-stack">
+                    <p>Tech Stack &nbsp; | &nbsp;</p>
+                    <ul>
+                        <li> <IoLogoHtml5 /> </li>
+                        <li> <IoLogoCss3 /> </li>
+                        <li> <IoLogoJavascript /> </li>
+                        <li> <IoLogoReact /> </li>
+                        <li> <SiBootstrap /> </li>
+                        <li> <IoLogoNodejs /> </li>
+                        <li> <FaJava /> </li>
+                        <li> <SiExpress /> </li>
+                        <li> <SiMysql /> </li>
+                        <li> <SiSqlite /> </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    );
+}

@@ -4,10 +4,10 @@
 }
 
 .main-container {
-    height: 100%;
     width: calc(100% - 20%);
     float: right;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
