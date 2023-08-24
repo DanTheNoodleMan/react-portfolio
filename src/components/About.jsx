@@ -22,10 +22,10 @@ export default function About() {
             <div className="hero-about">
                 <h1>About</h1>
                 <p>
-                    Welcome to my portfolio! I'm [Your Name], a passionate and
-                    dedicated fullstack developer with a keen eye for design and
-                    a strong love for crafting seamless user experiences. With a
-                    background in [Your Relevant Background or Education], I've
+                    Welcome to the portfolio of a passionate and
+                    driven fullstack developer with a keen eye for design and
+                    a knack for logical thinking. With a
+                    background in Computer Science and Business Admin., I've
                     honed my skills in both front-end and back-end development,
                     allowing me to create dynamic and responsive web
                     applications that captivate users and deliver value. <br />
@@ -33,7 +33,7 @@ export default function About() {
                     project, ensuring clean code and responsive designs. My goal
                     is to make technology accessible and intuitive for users.
                     Beyond coding, you might find me [Share a Light Interest].
-                    Let's collaborate and build something amazing together!
+                    Let's build something great together!
                 </p>
                 <img
                 src="../../src/assets/sonic.png"

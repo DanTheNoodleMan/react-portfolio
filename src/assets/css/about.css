@@ -11,8 +11,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 15em;
+    margin-left: 12em;
     margin-right: 5em;
+    font-size: 1.17em;
+}
+
+.hero-about h1{
+    font-size: 4.5em;
+    line-height: 1.1;
+    margin-bottom: 0.1em;
 }
 
 .rotating-image{
