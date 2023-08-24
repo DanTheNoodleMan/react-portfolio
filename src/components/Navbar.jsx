@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../assets/css/navbar.css";
 import "../../src/assets/sexy1.jpg";
+import { IoLogoGithub } from "react-icons/io5";
+import { IoLogoLinkedin } from "react-icons/io5";
 
 const Navbar = () => {
     const navLinks = [
         { id: "home", label: "Home" },
         { id: "about", label: "About" },
-        { id: "services", label: "Services" },
         { id: "projects", label: "Projects" },
         { id: "skills", label: "Skills" },
         { id: "contact", label: "Contact" },
@@ -48,7 +49,7 @@ const Navbar = () => {
                     {navLinks.map((navLink) => (
                         <li key={navLink.id}>
                             <a
-                                className={`nav-link ${
+                                className={`link ${
                                     activeLink === navLink.id ? "active" : ""
                                 }`}
                                 href={`#${navLink.id}`}
@@ -66,8 +67,8 @@ const Navbar = () => {
                         <script>
                             document.write(new Date().getFullYear());
                         </script>
-                        2023 All rights reserved | Made with love by
-                        <a href="https://colorlib.com" target="_blank">
+                        2023 All rights reserved | Made with love by &nbsp;
+                        <a className="link" href="https://colorlib.com" target="_blank">
                             Daniel Robertson
                         </a>
                     </small>
@@ -75,24 +76,15 @@ const Navbar = () => {
                 <ul>
                     <li>
                         <a href="#">
-                            <i className="icon-facebook2"></i>
+                            <IoLogoGithub />
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i className="icon-twitter2"></i>
+                            <IoLogoLinkedin />
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <i className="icon-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i className="icon-linkedin2"></i>
-                        </a>
-                    </li>
+
                 </ul>
             </footer>
         </div>

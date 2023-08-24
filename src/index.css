@@ -16,8 +16,8 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 
-    --bg: #fffbf5;
-    --primary: #f7efe5;
+    --bg: #000;
+    --bg-2: #14110F;
     --purple-1: #ca9ce5;
     --purple-2: #704495;
     --green-1: #00e0b0;

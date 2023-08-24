@@ -1,0 +1,12 @@
+#projects{
+    background-color: #000;
+}
+
+.hero-projects{
+    display:block;
+}
+
+.hero-projects h1{
+    margin: 1rem;
+    font-size: 4.5em;
+}

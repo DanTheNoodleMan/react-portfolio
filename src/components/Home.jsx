@@ -23,7 +23,7 @@ export default function Home() {
                 </h1>
                 <h3>
                     I'm a <span className="shine">Fullstack Developer</span>{" "}
-                    driven by my passion for mixing art and engineering to
+                    driven by my passion for mixing design and engineering to
                     create beautiful and functional tech solutions.
                 </h3>
                 <div className="tech-stack">
