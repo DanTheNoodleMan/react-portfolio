@@ -38,7 +38,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="sidebar">
+        <div className="sidebar slide-in">
             <nav>
                 <div className="photo-section">
                     <img src="../../src/assets/sexy1.jpg" alt="profile" />

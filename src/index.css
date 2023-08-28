@@ -22,6 +22,7 @@
     --purple-2: #704495;
     --green-1: #00e0b0;
     scroll-behavior: smooth;
+    
 }
 
 body {
@@ -29,6 +30,7 @@ body {
     min-width: 320px;
     background-color: #000;
     height: 100svh;
+    overflow-x: hidden;
 }
 
 section {
@@ -59,3 +61,57 @@ section {
         background-position: 100% 50%;
     }
 }
+
+.drop-in {
+    animation: drop-in 400ms ease 200ms backwards;
+}
+
+.drop-in-2 {
+    animation: drop-in 600ms ease 400ms backwards;
+}
+
+.drop-in-3 {
+    animation: drop-in 800ms ease 600ms backwards;
+}
+
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.slide-in-r {
+    animation: slide-in-r 800ms cubic-bezier(0.175, 0.885, 0.32, 1.15) 400ms backwards;
+}
+
+.slide-in-r-2 {
+    animation: slide-in-r 800ms cubic-bezier(0.175, 0.885, 0.32, 1.15) 700ms backwards;
+}
+
+@keyframes slide-in-r {
+    from {
+        opacity: 0;
+        transform: translatex(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+    .fade-in {
+        animation: fade-in 900ms ease 800ms backwards;
+    }
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }

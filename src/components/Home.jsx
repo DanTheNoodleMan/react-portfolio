@@ -14,34 +14,68 @@ import { SiBootstrap } from "react-icons/si";
 export default function Home() {
     return (
         <section id="home">
+            <div className="background-fade"></div>
             <div className="hero">
-                <h1> Hi!
-                    I'm{" "}
+                <h1 className="drop-in">
+                    {" "}
+                    Hi! I'm{" "}
                     <span className="shine">
                         Daniel <br /> Robertson
                     </span>
                 </h1>
-                <h3>
+                <h3 className="drop-in-2">
                     I'm a <span className="shine">Fullstack Developer</span>{" "}
                     driven by my passion for mixing design and engineering to
                     create beautiful and functional tech solutions.
                 </h3>
-                <div className="tech-stack">
+                <div className="tech-stack slide-in-r-2">
                     <p>Tech Stack &nbsp; | &nbsp;</p>
                     <ul>
-                        <li> <IoLogoHtml5 /> </li>
-                        <li> <IoLogoCss3 /> </li>
-                        <li> <IoLogoJavascript /> </li>
-                        <li> <IoLogoReact /> </li>
-                        <li> <SiBootstrap /> </li>
-                        <li> <IoLogoNodejs /> </li>
-                        <li> <FaJava /> </li>
-                        <li> <SiExpress /> </li>
-                        <li> <SiMysql /> </li>
-                        <li> <SiSqlite /> </li>
+                        <li>
+                            {" "}
+                            <IoLogoHtml5 />{" "}
+                        </li>
+                        <li>
+                            {" "}
+                            <IoLogoCss3 />{" "}
+                        </li>
+                        <li>
+                            {" "}
+                            <IoLogoJavascript />{" "}
+                        </li>
+                        <li>
+                            {" "}
+                            <IoLogoReact />{" "}
+                        </li>
+                        <li>
+                            {" "}
+                            <SiBootstrap />{" "}
+                        </li>
+                        <li>
+                            {" "}
+                            <IoLogoNodejs />{" "}
+                        </li>
+                        <li>
+                            {" "}
+                            <FaJava />{" "}
+                        </li>
+                        <li>
+                            {" "}
+                            <SiExpress />{" "}
+                        </li>
+                        <li>
+                            {" "}
+                            <SiMysql />{" "}
+                        </li>
+                        <li>
+                            {" "}
+                            <SiSqlite />{" "}
+                        </li>
                     </ul>
                 </div>
             </div>
+            <img src="../../src/assets/sexy1.jpg" alt="" />
+
         </section>
     );
 }
