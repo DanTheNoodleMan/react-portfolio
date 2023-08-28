@@ -1,5 +1,7 @@
 import React from "react";
 import "../assets/css/home.css";
+import Lottie from "lottie-react";
+
 import { IoLogoHtml5 } from "react-icons/io5";
 import { IoLogoCss3 } from "react-icons/io5";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -10,6 +12,7 @@ import { IoLogoReact } from "react-icons/io5";
 import { SiMysql } from "react-icons/si";
 import { SiSqlite } from "react-icons/si";
 import { SiBootstrap } from "react-icons/si";
+import scrollDown from "../../src/assets/scrollDown.json";
 
 export default function Home() {
     return (
@@ -25,7 +28,7 @@ export default function Home() {
                 </h1>
                 <h3 className="drop-in-2">
                     I'm a <span className="shine">Fullstack Developer</span>{" "}
-                    driven by my passion for mixing design and engineering to
+                    driven by my passion for mixing design and logic to
                     create beautiful and functional tech solutions.
                 </h3>
                 <div className="tech-stack slide-in-r-2">
@@ -74,6 +77,12 @@ export default function Home() {
                     </ul>
                 </div>
             </div>
+            <a href="#about"><Lottie
+                className="scroll-down"
+                animationData={scrollDown}
+                loop={true}
+            /></a>
+            
         </section>
     );
 }

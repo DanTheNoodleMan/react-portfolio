@@ -1,12 +1,12 @@
-#about{
-    background:url(../../src/assets/blob.svg);
+#about {
+    background: url(../../src/assets/blob.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: 120px;
 }
 
-.hero-about{
+.hero-about {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -16,13 +16,43 @@
     font-size: 1.17em;
 }
 
-.hero-about h1{
+.hero-about h1 {
     font-size: 4.5em;
     line-height: 1.1;
     margin-bottom: 0.1em;
 }
 
-.rotating-image{
-    width:100px;
-    height:100px;
+.rotating-image {
+    width: 100px;
+    height: 100px;
 }
+.inline{
+    display:inline-block;
+}
+.bouncing-text {
+    display: flex;
+    position: relative;
+}
+
+.bouncing-text div{
+    font-weight: bold;
+}
+
+.w {
+    color: var(--purple-1);
+    animation: bounce 1s ease infinite 0.75s, textShine 1s ease-in-out infinite alternate;
+    -webkit-animation: bounce 1s ease infinite 0.6s textShine 1s ease-in-out infinite alternate;
+}
+
+.o {
+    color: var(--green-1);
+    animation: bounce 1s ease infinite 0.5s, textShine 1s ease-in-out infinite alternate;
+    -webkit-animation: bounce 1s ease infinite 0.5s, textShine 1s ease-in-out infinite alternate;
+}
+
+.w2{
+    color: var(--purple-1);
+    animation: bounce 1s ease infinite 0.6s, textShine 1s ease-in-out infinite alternate;
+    -webkit-animation: bounce 1s ease infinite 0.6s, textShine 1s ease-in-out infinite alternate;
+}
+

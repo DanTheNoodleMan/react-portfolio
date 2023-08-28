@@ -4,10 +4,33 @@
 }
 
 .main-container {
+    background-color: var(--bg);
     width: calc(100% - 280px);
     float: right;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
+}
+
+.buffer{
+    height:16em;
+    width:100%;
+    background: url(../../src/assets/madrid.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+    margin-top: 10em;
+}
+
+.buffer .overlay{
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(0, 0, 0, 0.4);
 }

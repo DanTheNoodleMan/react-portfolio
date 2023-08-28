@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useSpring, animated } from "react-spring";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -11,9 +10,11 @@ import "./App.css";
 function App() {
     return (
         <>
+
             <Navbar />
             <main className="main-container">
                 <Home />
+                
                 <About />
                 <Projects />
                 <Skills />

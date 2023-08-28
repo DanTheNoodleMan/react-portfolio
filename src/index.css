@@ -17,12 +17,11 @@
     -webkit-text-size-adjust: 100%;
 
     --bg: #000;
-    --bg-2: #14110F;
+    --bg-2: #14110f;
     --purple-1: #ca9ce5;
     --purple-2: #704495;
     --green-1: #00e0b0;
     scroll-behavior: smooth;
-    
 }
 
 body {
@@ -53,6 +52,22 @@ section {
     background-size: 500% auto;
     animation: textShine 4s ease-in-out infinite alternate;
 }
+.shine-bounce {
+    font-weight: bold;
+    background: linear-gradient(
+        to right,
+        var(--green-1) 20%,
+        var(--purple-1) 40%,
+        #9f5ff4 70%,
+        #9f5ff4 90%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 500% auto;
+}
+
 @keyframes textShine {
     0% {
         background-position: 0% 50%;
@@ -86,11 +101,13 @@ section {
 }
 
 .slide-in-r {
-    animation: slide-in-r 800ms cubic-bezier(0.175, 0.885, 0.32, 1.15) 400ms backwards;
+    animation: slide-in-r 800ms cubic-bezier(0.175, 0.885, 0.32, 1.15) 400ms
+        backwards;
 }
 
 .slide-in-r-2 {
-    animation: slide-in-r 800ms cubic-bezier(0.175, 0.885, 0.32, 1.15) 700ms backwards;
+    animation: slide-in-r 800ms cubic-bezier(0.175, 0.885, 0.32, 1.15) 700ms
+        backwards;
 }
 
 @keyframes slide-in-r {
@@ -104,14 +121,62 @@ section {
     }
 }
 
-    .fade-in {
-        animation: fade-in 900ms ease 800ms backwards;
+.fade-in {
+    animation: fade-in 900ms ease 800ms backwards;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
     }
-    @keyframes fade-in {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+    to {
+        opacity: 1;
     }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+    10% {
+        transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+        transform: scale(0.9, 1.1) translateY(-8px);
+    }
+    50% {
+        transform: scale(1.05, 0.95) translateY(0);
+    }
+    58% {
+        transform: scale(1, 1) translateY(-2px);
+    }
+    65% {
+        transform: scale(1, 1) translateY(0);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+    10% {
+        transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+        transform: scale(0.9, 1.1) translateY(-8px);
+    }
+    50% {
+        transform: scale(1.05, 0.95) translateY(0);
+    }
+    58% {
+        transform: scale(1, 1) translateY(-2px);
+    }
+    65% {
+        transform: scale(1, 1) translateY(0);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}
