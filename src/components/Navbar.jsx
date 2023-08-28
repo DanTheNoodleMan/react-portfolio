@@ -75,12 +75,12 @@ const Navbar = () => {
                 </p>
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="#" className="footer-links">
                             <IoLogoGithub />
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" className="footer-links">
                             <IoLogoLinkedin />
                         </a>
                     </li>

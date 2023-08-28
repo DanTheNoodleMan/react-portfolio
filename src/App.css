@@ -4,7 +4,11 @@
 }
 
 .main-container {
-    background-color: var(--bg);
+    background: url(../../src/assets/blob.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 120px;
     width: calc(100% - 280px);
     float: right;
     display: flex;
@@ -13,24 +17,40 @@
     position: relative;
 }
 
-.buffer{
-    height:16em;
-    width:100%;
+.buffer {
+    height: 16em;
+    width: 100%;
     background: url(../../src/assets/madrid.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     position: relative;
-    margin-top: 10em;
 }
 
-.buffer .overlay{
+.buffer .overlay {
     z-index: 0;
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     right: 0;
-    background: rgb(0, 0, 0, 0.4);
+    background: rgb(0, 0, 0, 0.45);
+}
+
+.blur-buffer {
+    height: 10em;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 50%,
+        transparent 100%
+    );
+}
+
+.blur-buffer-2 {
+    height: 10em;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, transparent 100%);
+    padding-bottom: 5em;
 }
