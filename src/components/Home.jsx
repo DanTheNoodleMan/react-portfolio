@@ -74,8 +74,6 @@ export default function Home() {
                     </ul>
                 </div>
             </div>
-            <img src="../../src/assets/sexy1.jpg" alt="" />
-
         </section>
     );
 }
