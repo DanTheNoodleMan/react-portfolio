@@ -78,6 +78,7 @@ section {
     );
     color: transparent;
     background-size: 500% auto;
+    opacity: 0.9;
     animation: textShine 4s ease-in-out infinite alternate;
 }
 

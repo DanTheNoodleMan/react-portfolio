@@ -1,7 +1,8 @@
 import React from "react";
 import "../assets/css/card.css";
 
-const Card = ({ imageSrc, altD, title, description }) => {
+const Card = ({ imageSrc, altD, title, description, tools }) => {
+
     return (
         <div className="card">
             <div className="card-image">
@@ -18,8 +19,9 @@ const Card = ({ imageSrc, altD, title, description }) => {
             <p className="card-title">{title}</p>
             <p className="card-body">{description}</p>
             <div className="categories">
-                <span className="shine-bg">React</span>
-                <span className="shine-bg">Css</span>
+                {tools?.map((tool) => (
+                    <span key={tool} className="shine-bg">{tool}</span>
+                ))}
             </div>
         </div>
     );

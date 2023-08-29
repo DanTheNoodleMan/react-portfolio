@@ -16,12 +16,13 @@ export default function Projects() {
     const portfolioDescription = "This is my portfolio website that I created to showcase my skills and projects. It is a static website that is hosted on Github Pages. It is set up with Vite and built using React, CSS, and Javascript. It is a responsive website that is optimized for mobile and desktop.";
     const bammbaoDescription = (
         <span>
-            Bammbao is a website that I created for a local restaurant with a functional and dynamic menu system. It is a dynamic website that is hosted on Netlify. It is set up with Vite and built using HTML, CSS, Bootstrap, Node.js, Express.js and MySQL. It is a responsive website that is optimized for mobile and desktop.<br />
+            Bammbao is a website that I created for a local restaurant with a functional and dynamic menu system. It is a dynamic website that is hosted on Netlify. It is set up with Vite and built using HTML, CSS, Bootstrap, Node.js, Express.js and MySQL. It is a responsive website that is optimized for mobile and desktop.
             <br /> <span className="highlight">(Backend Menu system is functional but not accesible because I could't find a good free hosting service for MySQL so I am working on a change to a MongoDB database.)</span>
         </span>
     );
 
-    const tools = [ "React", "CSS", "Javascript", "HTML", "Bootstrap", "Node.js", "Express.js", "MySQL" ];
+    const toolsPortfolio = [ "CSS", "React", "Javascript", "Vite" ];
+    const toolsBammbao = ["HTML", "CSS", "Bootstrap", "Node.js", "Express.js", "MySQL", "Vite" ];
 
     return (
         <section id="projects">
@@ -30,8 +31,8 @@ export default function Projects() {
                     <span className="shine">Projects</span>
                 </h1>
                 <div className="project-grid">
-                    <Card imageSrc={portfolio} altD={altPortfolio} title={portfolioTitle} description={portfolioDescription}  />
-                    <Card imageSrc={bammbao} altD={altBammbao} title={bammbaoTitle} description={bammbaoDescription}/>
+                    <Card imageSrc={portfolio} altD={altPortfolio} title={portfolioTitle} description={portfolioDescription} tools={toolsPortfolio}  />
+                    <Card imageSrc={bammbao} altD={altBammbao} title={bammbaoTitle} description={bammbaoDescription} tools={toolsBammbao}/>
                     <Card altD={altPizza}  />
                 </div>
             </div>

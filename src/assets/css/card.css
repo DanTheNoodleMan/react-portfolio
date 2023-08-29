@@ -11,8 +11,6 @@
     animation: move-border 4s linear infinite alternate;
 }
 
-
-
 @keyframes move-border {
     0% {
         background-position: 0% 0%, 0% 0%;
@@ -48,7 +46,7 @@
 }
 
 .card-body {
-    margin: 13px 0 10px 10px;
+    margin: 13px 0 13px 10px;
     color: rgb(184, 184, 184);
     font-size: 15px;
 }
@@ -57,6 +55,7 @@
     display: flex;
     gap: 8px;
     margin-left: 10px;
+    flex-wrap: wrap;
 }
 .categories span {
     color: white;
