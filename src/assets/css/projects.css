@@ -1,13 +1,34 @@
-#projects{
+#projects {
     background: #000;
     padding-left: 4em;
+    height:100%;
 }
 
-.hero-projects{
-    display:block;
+.hero-projects {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 5em;
+    font-size: 1.17em;
 }
 
-.hero-projects h1{
-    margin: 1rem;
+.hero-projects h1 {
+    margin: 4rem 0;
     font-size: 4.5em;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    grid-gap: 2em;
+    margin-top: 2em;
+    justify-items: center;
+}
+
+.card-body span.highlight {
+    font-weight: bold;
+    font-size: 0.8em;
+    line-height: 0.5em;
+    color: #ff0000; /* Apply your desired color */
 }

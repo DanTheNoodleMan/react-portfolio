@@ -68,6 +68,19 @@ section {
     background-size: 500% auto;
 }
 
+.shine-bg {
+    background: linear-gradient(
+        to right,
+        var(--green-1) 20%,
+        var(--purple-1) 40%,
+        #9f5ff4 70%,
+        #9f5ff4 90%
+    );
+    color: transparent;
+    background-size: 500% auto;
+    animation: textShine 4s ease-in-out infinite alternate;
+}
+
 @keyframes textShine {
     0% {
         background-position: 0% 50%;

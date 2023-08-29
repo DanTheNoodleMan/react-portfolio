@@ -18,7 +18,7 @@ function App() {
         position: "fixed",
         left: "0px",
         top: "0px",
-        zIndex: 10000,
+        zIndex: 1000,
 
         pointerEvents: "none",
         opacity: 1,
