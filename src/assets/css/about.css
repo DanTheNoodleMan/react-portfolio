@@ -1,5 +1,5 @@
 #about {
-    background: url(../../src/assets/blob.svg);
+    background: url(./assets/blob.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -11,8 +11,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 12em;
-    margin-right: 5em;
+    margin-left: 14em;
+    margin-right: 6em;
     font-size: 1.17em;
 }
 
@@ -23,6 +23,7 @@
 }
 
 .hero-about p {
+    font-size: 1.2em;
     line-height: 1.5;
     margin: 0rem 0 2rem 0;
 }
