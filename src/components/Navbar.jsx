@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../assets/css/navbar.css";
-import "../../src/assets/sexy1.jpg";
+import profile from "../assets/sexy1.jpg";
 import { IoLogoGithub } from "react-icons/io5";
 import { IoLogoLinkedin } from "react-icons/io5";
 
@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="sidebar slide-in">
             <nav>
                 <div className="photo-section">
-                    <img src="../../src/assets/sexy1.jpg" alt="profile" />
+                    <img src={profile} alt="profile" />
                     <h1 className="name shine">Daniel Robertson</h1>
                     <h3 className="position">Fullstack Developer</h3>
                 </div>
