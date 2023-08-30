@@ -8,6 +8,7 @@
     border: 2px solid transparent;
     background-size: 1000% auto;
     transition: 0.4s;
+    visibility: hidden;
     animation: move-border 4s linear infinite alternate;
 }
 

@@ -1,10 +1,13 @@
 import React from "react";
 import "../assets/css/card.css";
+import useAnimateOnScroll from "./useAnimateOnScroll";
 
 const Card = ({ imageSrc, altD, title, description, tools }) => {
 
+    useAnimateOnScroll(".slide-anim-1", { animationClass: "slide-in-r-2", delay:150 })
+
     return (
-        <div className="card">
+        <div className="card slide-anim-1">
             <div className="card-image">
                 <img
                     src={imageSrc}

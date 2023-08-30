@@ -78,7 +78,7 @@ export default function Home() {
                 </div>
             </div>
             <a href="#about"><Lottie
-                className="scroll-down"
+                className="scroll-down fade-in"
                 animationData={scrollDown}
                 loop={true}
             /></a>

@@ -3,9 +3,9 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import TrailerAnimation from "./components/TrailerAnim"; // Import the TrailerAnimation component
+
 import "./App.css";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
 
         display: "grid",
         placeItems: "center",
-        filter: 'blur(22vmax)'
+        filter: "blur(22vmax)",
     };
 
     const iconStyles = {
@@ -45,6 +45,9 @@ function App() {
             <Navbar />
             <main className="main-container">
                 <Home />
+                <div className="buffer">
+                    <div className="overlay"></div>
+                </div>
                 <div className="blur-buffer"></div>
                 <About />
                 <div className="blur-buffer-2"></div>
@@ -52,7 +55,9 @@ function App() {
                     <div className="overlay"></div>
                 </div>
                 <Projects />
-                <Skills />
+                <div className="buffer">
+                    <div className="overlay"></div>
+                </div>
                 <Contact />
             </main>
         </>
