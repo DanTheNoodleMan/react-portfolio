@@ -16,23 +16,24 @@ import { SiBootstrap } from "react-icons/si";
 import scrollDown from "../../src/assets/scrollDown.json";
 
 export default function Home() {
-    const backgroundFadeStyles = {
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        backgroundSize: "45%",
-        backgroundPosition: "110%",
-        backgroundRepeat: "no-repeat",
-        zIndex: 1,
-        animation: "fade-in 900ms ease 700ms backwards",
-        background: `url(${profile})`, // Set the background image
-    };
-
     return (
         <section id="home">
-            <div style={backgroundFadeStyles}></div>
+            <div
+                style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    backgroundSize: "45%",
+                    backgroundPosition: "110%",
+                    backgroundRepeat: "no-repeat",
+                    zIndex: 1,
+                    animation: "fade-in 900ms ease 700ms backwards",
+                    background: `url(${profile})`, // Set the background image
+                }}
+            ></div>
+
             <div className="hero">
                 <h1 className="drop-in">
                     {" "}
