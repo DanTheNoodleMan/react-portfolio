@@ -1,7 +1,6 @@
 import React from "react";
 import "../assets/css/home.css";
 import Lottie from "lottie-react";
-import profile from "../assets/sexy1.jpg";
 
 import { IoLogoHtml5 } from "react-icons/io5";
 import { IoLogoCss3 } from "react-icons/io5";
@@ -18,7 +17,7 @@ import scrollDown from "../../src/assets/scrollDown.json";
 export default function Home() {
     return (
         <section id="home">
-            <div className="background-fade" style={{background:{profile}}}></div>
+            <div className="background-fade"></div>
             <div className="hero">
                 <h1 className="drop-in">
                     {" "}
