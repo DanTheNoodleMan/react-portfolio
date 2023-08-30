@@ -25,12 +25,10 @@ export default function Home() {
                     left: 0,
                     width: "100%",
                     height: "100%",
-                    backgroundSize: "45%",
-                    backgroundPosition: "110%",
-                    backgroundRepeat: "no-repeat",
                     zIndex: 1,
                     animation: "fade-in 900ms ease 700ms backwards",
-                    background: `url(${profile})`, // Set the background image
+                    background: `url(${profile}) no-repeat 110%`, 
+                    backgroundSize: "45%",
                 }}
             ></div>
 
