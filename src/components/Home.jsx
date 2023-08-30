@@ -1,5 +1,5 @@
 import React from "react";
-import "./assets/css/home.css";
+import "../assets/css/home.css";
 import Lottie from "lottie-react";
 
 import { IoLogoHtml5 } from "react-icons/io5";
