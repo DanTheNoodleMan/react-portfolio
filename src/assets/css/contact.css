@@ -29,7 +29,7 @@
 }
 
 .world{
-    width: 30em;
+    width: 20em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,12 +165,22 @@
 }
 
 @media (max-width: 990px){
+
+    #contact{
+        padding:2em;
+    }
+
     .hero-contact {
         justify-content: center;
     }
+
     .hero-contact h1{
         text-align: center;
         font-size: 3.5em;
+    }
+
+    .form-container{
+        width:100%;
     }
 
     .world{

@@ -39,7 +39,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 1em;
 }
@@ -80,7 +80,7 @@
     }
 
     .scroll-down{
-        width:3em;
+        display: none;
     }
 
 }
