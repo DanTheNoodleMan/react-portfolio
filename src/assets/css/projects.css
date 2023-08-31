@@ -32,3 +32,9 @@
     line-height: 0.5em;
     color: #ff0000; /* Apply your desired color */
 }
+
+@media (max-width: 990px){
+    .hero-projects h1{
+        text-align: center;
+    }
+}

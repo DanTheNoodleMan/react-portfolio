@@ -4,7 +4,7 @@ import profile from "../assets/sexy1.jpg";
 import { IoLogoGithub } from "react-icons/io5";
 import { IoLogoLinkedin } from "react-icons/io5";
 
-const Navbar = () => {
+const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
     const navLinks = [
         { id: "home", label: "Home" },
         { id: "about", label: "About" },
@@ -14,6 +14,7 @@ const Navbar = () => {
 
     const [activeLink, setActiveLink] = useState(navLinks[0].id); //Set initial value active, so that the first link is active on page load (Home)
 
+    /* Make sidebar update active link based on scroll position */
     useEffect(() => {
         const handleScroll = () => {
             const sectionElements = document.querySelectorAll("section");
@@ -37,56 +38,89 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="sidebar slide-in">
-            <nav>
-                <div className="photo-section">
-                    <img src={profile} alt="profile" />
-                    <h1 className="name shine">Daniel Robertson</h1>
-                    <h3 className="position">Fullstack Developer</h3>
-                </div>
-                <ul className="nav-links">
-                    {navLinks.map((navLink) => (
-                        <li key={navLink.id}>
+        <>
+            {isMobile && 
+                <button
+                    className={`toggle-button ${
+                        isSidebarOpen ? "offcanvas" : ""
+                    }`}
+                    onClick={toggleSidebar}
+                >
+                    <p>Menu</p>
+                    <svg
+                        strokeWidth="4"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            strokeLinejoin="round"
+                            strokeLinecap="round"
+                        ></path>
+                    </svg>
+                </button>
+            }
+
+            <div className={`slide-in sidebar ${isSidebarOpen ? "open" : "close"}`}>
+                <nav>
+                    <div className="photo-section">
+                        <img src={profile} alt="profile" />
+                        <h1 className="name shine">Daniel Robertson</h1>
+                        <h3 className="position">Fullstack Developer</h3>
+                    </div>
+                    <ul className="nav-links">
+                        {navLinks.map((navLink) => (
+                            <li key={navLink.id}>
+                                <a
+                                    className={`link ${
+                                        activeLink === navLink.id
+                                            ? "active"
+                                            : ""
+                                    }`}
+                                    href={`#${navLink.id}`}
+                                    onClick={isSidebarOpen && isMobile ? toggleSidebar : undefined}
+                                    >
+                                    {navLink.label}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+                <footer>
+                    <p>
+                        <small>
+                            © Copyright
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            2023 All rights reserved | Made with love by &nbsp;
                             <a
-                                className={`link ${
-                                    activeLink === navLink.id ? "active" : ""
-                                }`}
-                                href={`#${navLink.id}`}
+                                className="link"
+                                href="https://colorlib.com"
+                                target="_blank"
                             >
-                                {navLink.label}
+                                Daniel Robertson
+                            </a>
+                        </small>
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/DanTheNoodleMan" className="footer-links">
+                                <IoLogoGithub />
                             </a>
                         </li>
-                    ))}
-                </ul>
-            </nav>
-            <footer>
-                <p>
-                    <small>
-                        © Copyright
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
-                        2023 All rights reserved | Made with love by &nbsp;
-                        <a className="link" href="https://colorlib.com" target="_blank">
-                            Daniel Robertson
-                        </a>
-                    </small>
-                </p>
-                <ul>
-                    <li>
-                        <a href="#" className="footer-links">
-                            <IoLogoGithub />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="footer-links">
-                            <IoLogoLinkedin />
-                        </a>
-                    </li>
-
-                </ul>
-            </footer>
-        </div>
+                        <li>
+                            <a href="https://www.linkedin.com/in/daniel-r-robertson/" className="footer-links">
+                                <IoLogoLinkedin />
+                            </a>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+        </>
     );
 };
 

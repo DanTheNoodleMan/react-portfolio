@@ -1,9 +1,12 @@
 #about {
+    position: relative;
     background: url(./assets/blob.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: 120px;
+    margin-left: 4em;
+    height: 100%;
 }
 
 .hero-about {
@@ -11,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 14em;
+    margin-left: 10em;
     margin-right: 6em;
     font-size: 1.17em;
 }
@@ -64,4 +67,15 @@
 
 .about-text{
     overflow: hidden;
+}
+
+/*media queries*/
+@media (max-width: 990px) {
+    
+    .hero-about{
+        margin-left: 0;
+        margin-right: 5em  
+    }
+
+
 }

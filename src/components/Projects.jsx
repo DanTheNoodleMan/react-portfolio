@@ -25,6 +25,9 @@ export default function Projects() {
 
     const toolsPortfolio = [ "CSS", "React", "Javascript", "Vite" ];
     const toolsBammbao = ["HTML", "CSS", "Bootstrap", "Node.js", "Express.js", "MySQL", "Vite" ];
+    
+    const linkPortfolio = "https://danthenoodleman.github.io/react-portfolio/";
+    const linkBammbao = "https://bammbao.netlify.app/";
 
     useAnimateOnScroll(".drop-in-anim", { animationClass: "drop-in" });
     useAnimateOnScroll(".drop-in-anim-2", { animationClass: "drop-in-2" });
@@ -36,8 +39,8 @@ export default function Projects() {
                     <span className="shine">Projects</span>
                 </h1>
                 <div className="project-grid">
-                    <Card imageSrc={portfolio} altD={altPortfolio} title={portfolioTitle} description={portfolioDescription} tools={toolsPortfolio} />
-                    <Card imageSrc={bammbao} altD={altBammbao} title={bammbaoTitle} description={bammbaoDescription} tools={toolsBammbao}/>
+                    <Card imageSrc={portfolio} altD={altPortfolio} title={portfolioTitle} description={portfolioDescription} tools={toolsPortfolio} link={linkPortfolio} />
+                    <Card imageSrc={bammbao} altD={altBammbao} title={bammbaoTitle} description={bammbaoDescription} tools={toolsBammbao} link={linkBammbao}/>
                     <Card altD={altPizza} />
                 </div>
             </div>
