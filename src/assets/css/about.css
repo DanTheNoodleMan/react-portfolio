@@ -71,10 +71,22 @@
 
 /*media queries*/
 @media (max-width: 990px) {
+    #about{
+        padding:2em;
+        margin:0;
+    }
     
     .hero-about{
         margin-left: 0;
-        margin-right: 5em  
+        margin-right: 0;
+    }
+
+    .hero-about h1{
+        font-size: 3.5em;
+    }
+
+    .about-text p {
+        font-size: 1em;
     }
 
 

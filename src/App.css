@@ -75,12 +75,18 @@
 
 @media (max-width: 390px) {
     body{
-        width: 132.5% !important;
+        width: 100% !important;
     }
 
     .main-container{
         background-position: 220px;
     }
+
+    .blur-buffer, .blur-buffer-2{
+        height:7em;
+        padding:0;
+    }
+
 
 }
 

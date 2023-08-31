@@ -3,6 +3,7 @@
     padding-left: 4em;
     height:100%;
     padding-bottom: 10em;
+    overflow-x: hidden;
 }
 
 .hero-projects {
@@ -24,6 +25,7 @@
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
     grid-gap: 2em;
     justify-items: center;
+    width:100%;
 }
 
 .card-body span.highlight {
@@ -34,7 +36,19 @@
 }
 
 @media (max-width: 990px){
+    .hero-projects{
+        margin-right: 0;
+    }
     .hero-projects h1{
         text-align: center;
+        font-size: 3.5em;
     }
+    #projects{
+        padding: 2em;
+    }
+
+    .project-grid{
+        grid-template-columns: repeat(auto-fill,minmax(10em,1fr));
+    }
+
 }

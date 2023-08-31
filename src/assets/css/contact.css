@@ -163,3 +163,17 @@
         width:100%;
     }
 }
+
+@media (max-width: 990px){
+    .hero-contact {
+        justify-content: center;
+    }
+    .hero-contact h1{
+        text-align: center;
+        font-size: 3.5em;
+    }
+
+    .world{
+        width:10em;
+    }
+}

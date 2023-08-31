@@ -24,6 +24,7 @@
     --purple-2: #704495;
     --green-1: #00e0b0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
