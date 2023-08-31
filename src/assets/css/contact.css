@@ -146,7 +146,7 @@
 }
 
 
-@media (max-width: 390px) {
+@media (max-width: 560px) {
     #contact{
         padding:0;
     }
@@ -163,6 +163,7 @@
         width:100%;
     }
 }
+
 
 @media (max-width: 990px){
 
@@ -187,3 +188,4 @@
         width:10em;
     }
 }
+
