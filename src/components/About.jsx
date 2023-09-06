@@ -17,7 +17,7 @@ export default function About() {
                         Hey there, fellow internet surfer! 👋 <br />
                         Welcome to my little nook on the Internet where I show
                         you what I've been getting up to. I landed on web
-                        development because I love the visual feedback and
+                        development because I love visual feedback and
                         creating things that make people go "
                         <span className="inline">
                             <span className="bouncing-text">
@@ -26,12 +26,12 @@ export default function About() {
                                 <span className="shine-bounce w2">w</span>
                             </span>
                         </span>
-                        ". I'm currently based in Madrid but am always looking
+                        ". I'm currently based in Madrid but I am always looking
                         for opportunities that'll take me around the world!
                         <br /> <br />
                         Thanks to my formation in{" "}
                         <span className="shine">
-                            Computer Science and Business Admin
+                            Computer Science and Business Administration
                         </span>
                         , I've worked with a wide variety of technologies and
                         tools, from{" "}
@@ -75,16 +75,15 @@ export default function About() {
                             (even though I bring it wherever I go)
                         </span>{" "}
                         I love travelling and discovering new places, trying new
-                        foods, and meeting new people, I'm always trying to
-                        expand my horizons. I'm also a nut for everything
-                        "geeky" from video games to anime, and I'm always down
-                        for recommendations! <br /> <br />
-                        Feel free to{" "}
+                        foods, and meeting new people. I'm always trying to
+                        expand my horizons and am open to any recommendations. I'm a very open and adaptable guy always down for constructive feedback. Also, I'm a
+                        <i> geek</i> for everything from video games to anime. <br /> <br />
+                        If you have ideas, projects, partnership opportunities, or anything similar, please feel free to {" "}
                         <a href="#contact" className="shine">
                             {" "}
                             reach out
                         </a>{" "}
-                        to me if you have any questions or just want to chat!{" "}
+                        to me!{" "}
                         <br /> <br />
                     </p>
                 </div>

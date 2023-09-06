@@ -22,7 +22,7 @@
 .hero-about h1 {
     font-size: 4.5em;
     line-height: 1.1;
-    margin: 0rem 0 2rem 0;
+    margin: 2rem 0;
 }
 
 .hero-about p {
@@ -35,59 +35,64 @@
     width: 100px;
     height: 100px;
 }
-.inline{
-    display:inline-block;
+.inline {
+    display: inline-block;
 }
 .bouncing-text {
     display: flex;
     position: relative;
 }
 
-.bouncing-text div{
+.bouncing-text div {
     font-weight: bold;
 }
 
 .w {
     color: var(--purple-1);
-    animation: bounce 1s ease infinite 0.75s, textShine 1s ease-in-out infinite alternate;
-    -webkit-animation: bounce 1s ease infinite 0.6s textShine 1s ease-in-out infinite alternate;
+    animation: bounce 1s ease infinite 0.75s,
+        textShine 1s ease-in-out infinite alternate;
+    -webkit-animation: bounce 1s ease infinite 0.6s textShine 1s ease-in-out
+        infinite alternate;
 }
 
 .o {
     color: var(--green-1);
-    animation: bounce 1s ease infinite 0.5s, textShine 1s ease-in-out infinite alternate;
-    -webkit-animation: bounce 1s ease infinite 0.5s, textShine 1s ease-in-out infinite alternate;
+    animation: bounce 1s ease infinite 0.5s,
+        textShine 1s ease-in-out infinite alternate;
+    -webkit-animation: bounce 1s ease infinite 0.5s,
+        textShine 1s ease-in-out infinite alternate;
 }
 
-.w2{
+.w2 {
     color: var(--purple-1);
-    animation: bounce 1s ease infinite 0.6s, textShine 1s ease-in-out infinite alternate;
-    -webkit-animation: bounce 1s ease infinite 0.6s, textShine 1s ease-in-out infinite alternate;
+    animation: bounce 1s ease infinite 0.6s,
+        textShine 1s ease-in-out infinite alternate;
+    -webkit-animation: bounce 1s ease infinite 0.6s,
+        textShine 1s ease-in-out infinite alternate;
 }
 
-.about-text{
+.about-text {
     overflow: hidden;
 }
 
 /*media queries*/
 @media (max-width: 990px) {
-    #about{
-        padding:2em;
-        margin:0;
+    #about {
+        padding: 2em;
+        margin: 0;
     }
-    
-    .hero-about{
+
+    .hero-about {
         margin-left: 0;
         margin-right: 0;
     }
 
-    .hero-about h1{
+    .hero-about h1 {
         font-size: 3.5em;
     }
 
     .about-text p {
         font-size: 1em;
     }
-
 
 }

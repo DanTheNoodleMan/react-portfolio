@@ -14,32 +14,46 @@ const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
 
     const [activeLink, setActiveLink] = useState(navLinks[0].id); //Set initial value active, so that the first link is active on page load (Home)
 
+    // Debounce function for better performance
+    const debounce = (func, delay) => {
+        let timeoutId;
+        return function (...args) {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+            timeoutId = setTimeout(() => {
+                func(...args);
+            }, delay);
+        };
+    };
+
+    const handleScroll = () => {
+        const sectionElements = document.querySelectorAll("section");
+        sectionElements.forEach((sectionElement) => {
+            const rect = sectionElement.getBoundingClientRect();
+            if (
+                rect.top <= window.innerHeight / 2 &&
+                rect.bottom >= window.innerHeight / 2
+            ) {
+                setActiveLink(sectionElement.id);
+            }
+        });
+    };
+
+    const debouncedHandleScroll = debounce(handleScroll, 50); 
+
     /* Make sidebar update active link based on scroll position */
     useEffect(() => {
-        const handleScroll = () => {
-            const sectionElements = document.querySelectorAll("section");
-            sectionElements.forEach((sectionElement) => {
-                const rect = sectionElement.getBoundingClientRect();
-
-                if (
-                    rect.top <= window.innerHeight / 2 &&
-                    rect.bottom >= window.innerHeight / 2
-                ) {
-                    setActiveLink(sectionElement.id);
-                }
-            });
-        };
-
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", debouncedHandleScroll);
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("scroll", debouncedHandleScroll);
         };
     }, []);
 
     return (
         <>
-            {isMobile && 
+            {isMobile && (
                 <button
                     className={`toggle-button ${
                         isSidebarOpen ? "offcanvas" : ""
@@ -62,9 +76,13 @@ const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
                         ></path>
                     </svg>
                 </button>
-            }
+            )}
 
-            <div className={`slide-in sidebar ${isSidebarOpen ? "open" : "close"}`}>
+            <div
+                className={`slide-in sidebar ${
+                    isSidebarOpen ? "open" : "close"
+                }`}
+            >
                 <nav>
                     <div className="photo-section">
                         <img src={profile} alt="profile" />
@@ -81,8 +99,12 @@ const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
                                             : ""
                                     }`}
                                     href={`#${navLink.id}`}
-                                    onClick={isSidebarOpen && isMobile ? toggleSidebar : undefined}
-                                    >
+                                    onClick={
+                                        isSidebarOpen && isMobile
+                                            ? toggleSidebar
+                                            : undefined
+                                    }
+                                >
                                     {navLink.label}
                                 </a>
                             </li>
@@ -108,12 +130,18 @@ const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
                     </p>
                     <ul>
                         <li>
-                            <a href="https://github.com/DanTheNoodleMan" className="footer-links">
+                            <a
+                                href="https://github.com/DanTheNoodleMan"
+                                className="footer-links"
+                            >
                                 <IoLogoGithub />
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/daniel-r-robertson/" className="footer-links">
+                            <a
+                                href="https://www.linkedin.com/in/daniel-r-robertson/"
+                                className="footer-links"
+                            >
                                 <IoLogoLinkedin />
                             </a>
                         </li>

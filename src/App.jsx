@@ -102,11 +102,11 @@ function App() {
                 <div className="blur-buffer"></div>
                 <About />
                 <div className="blur-buffer-2"></div>
-                <div className="buffer">
+                <div className="buffer buffer-2">
                     <div className="overlay"></div>
                 </div>
                 <Projects />
-                <div className="buffer">
+                <div className="buffer buffer-3">
                     <div className="overlay"></div>
                 </div>
                 <Contact />

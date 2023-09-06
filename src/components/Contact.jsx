@@ -30,17 +30,14 @@ export default function Contact() {
     };
 
     useAnimateOnScroll(".drop-in-anim", { animationClass: "drop-in" });
-    useAnimateOnScroll(".slide-anim-1", {
-        animationClass: "slide-in-r-2",
-        delay: 150,
-    });
+    useAnimateOnScroll(".fade", { animationClass: "fade-in", delay: 100});
 
     return (
         <section id="contact">
             <div className="hero-contact">
                 <div className="title-form">
                     <h1 className="shine drop-in-anim">Contact</h1>
-                    <div className="form-container slide-anim-1">
+                    <div className="form-container fade">
                         <form className="form" ref={form} onSubmit={sendEmail}>
                             <div className="form-group">
                                 <label>Name</label>

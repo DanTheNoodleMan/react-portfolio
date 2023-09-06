@@ -1,8 +1,7 @@
 #projects {
     background: #000;
-    padding-left: 4em;
+    padding: 2em 0 2em 4em;
     height:100%;
-    padding-bottom: 10em;
     overflow-x: hidden;
 }
 
@@ -12,11 +11,12 @@
     flex-direction: column;
     justify-content: center;
     margin-right: 5em;
+    margin-bottom: 2em;
     font-size: 1.17em;
 }
 
 .hero-projects h1 {
-    margin: 4rem 0 2rem 0;
+    margin: 2rem 0 2rem 0;
     font-size: 4.5em;
 }
 
@@ -48,7 +48,7 @@
     }
 
     .project-grid{
-        grid-template-columns: repeat(auto-fill,minmax(10em,1fr));
+        grid-template-columns: repeat(auto-fill,minmax(15em,1fr));
     }
 
 }

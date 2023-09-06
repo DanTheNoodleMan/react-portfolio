@@ -15,16 +15,17 @@ export default function Projects() {
     const portfolioTitle = "Portfolio";
     const bammbaoTitle = "Bammbao";
 
-    const portfolioDescription = "This is my portfolio website that I created to showcase my skills and projects. It is a static website that is hosted on Github Pages. It is set up with Vite and built using React, CSS, and Javascript. It is a responsive website that is optimized for mobile and desktop.";
+    const portfolioDescription = "My portfolio website is as a showcase of my abilities with React. Throughout its development, I delved into React's intricate concepts and gained a solid grasp of its core principles. Hosted on Github Pages using Actions, this static website exhibits my skills and projects as well as reflects the valuable knowledge I acquired while using many different development tools. It exemplifies my ability to create responsive and optimized web solutions, catering seamlessly to both mobile and desktop users.";
+    
     const bammbaoDescription = (
         <span>
-            Bammbao is a website that I created for a local restaurant with a functional and dynamic menu system. It is a dynamic website that is hosted on Netlify. It is set up with Vite and built using HTML, CSS, Bootstrap, Node.js, Express.js and MySQL. It is a responsive website that is optimized for mobile and desktop.
-            <br /> <span className="highlight">(Backend Menu system is functional but not accesible because I could't find a good free hosting service for MySQL so I am working on a change to a MongoDB database.)</span>
+            Bammbao is a website that I developed for a local restaurant featuring a dynamic menu powered by a RESTful API. The owner of the restaurant can dynamically change the contents of the menu with a secret url key I've given them. This project provided me with valuable experience handling intricate data integrations resulting in a seamlessly dynamic menu system, as well as developing a logical URI schema. With a mobile-first approach I honed my skills in optimizing user experiences across different devices, ensuring that the website performs well on both mobile and desktop.
+            <br /> <span className="highlight">(Backend menu system is functional but not accesible because I could't find a good free hosting service for MySQL so I am working on a change to a Postgres database.)</span>
         </span>
     );
 
     const toolsPortfolio = [ "CSS", "React", "Javascript", "Vite" ];
-    const toolsBammbao = ["HTML", "CSS", "Bootstrap", "Node.js", "Express.js", "MySQL", "Vite" ];
+    const toolsBammbao = ["HTML", "CSS", "Bootstrap", "EJS", "Node.js", "Express.js", "MySQL", "Vite" ];
     
     const linkPortfolio = "https://danthenoodleman.github.io/react-portfolio/";
     const linkBammbao = "https://bammbao.netlify.app/";

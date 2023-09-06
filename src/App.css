@@ -34,6 +34,25 @@
     position: relative;
 }
 
+.buffer-2{
+    background-image: url(https://img.freepik.com/free-photo/liquid-purple-art-painting-abstract-colorful-background-with-color-splash-paints-modern-art_1258-97771.jpg?w=1800&t=st=1694005817~exp=1694006417~hmac=72b2525035ad1861d33552ad90f55e34f8ea0f7ab616df079da2de9f6ebb368e);
+    
+}
+@keyframes moveUp {
+    from {
+        background-position: bottom;
+    }
+    to {
+        background-position: top;
+    }
+}
+
+.buffer-3{
+    background-image: url(https://img.freepik.com/free-photo/liquid-marbling-paint-texture-background-fluid-painting-abstract-texture-intensive-color-mix-wallpaper_1258-99323.jpg?w=1380&t=st=1694006553~exp=1694007153~hmac=57017ebcaa9af20de659a632921339a544a02ff94d9f2dad8f4c51977273965c);
+    
+}
+
+
 .buffer .overlay {
     z-index: 0;
     position: absolute;
@@ -58,7 +77,6 @@
     height: 15em;
     width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, transparent 100%);
-    padding-bottom: 5em;
 }
 
 .hidden{
@@ -66,27 +84,24 @@
 }
 
 @media (max-width: 990px) {
-    .main-container{
-        width: 100%;
-        background-position: 660px;
-    }
-}
-
-
-@media (max-width: 390px) {
     body{
         width: 100% !important;
     }
 
     .main-container{
-        background-position: 220px;
+        background: #000;
+        width: 100%;
+        background-position: 660px;
     }
 
-    .blur-buffer, .blur-buffer-2{
-        height:7em;
-        padding:0;
+    .blur-buffer,
+    .blur-buffer-2 {
+        display: none;
     }
-
-
+    /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed*/
+    .buffer {
+        background-attachment: scroll;
+    }
 }
+
 
