@@ -28,11 +28,12 @@
     width:100%;
 }
 
-.card-body span.highlight {
+.card-body span.highlight a {
+    text-decoration: none;
     font-weight: bold;
     font-size: 0.8em;
     line-height: 0.5em;
-    color: #ff0000; /* Apply your desired color */
+    color: #72d7ff; /* Apply your desired color */
 }
 
 @media (max-width: 990px){

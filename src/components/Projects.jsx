@@ -20,7 +20,7 @@ export default function Projects() {
     const bammbaoDescription = (
         <span>
             Bammbao is a website that I developed for a local restaurant featuring a dynamic menu powered by a RESTful API. The owner of the restaurant can dynamically change the contents of the menu with a secret url key I've given them. This project provided me with valuable experience handling intricate data integrations resulting in a seamlessly dynamic menu system, as well as developing a logical URI schema. With a mobile-first approach I honed my skills in optimizing user experiences across different devices, ensuring that the website performs well on both mobile and desktop.
-            <br /> <span className="highlight">(Backend menu system is functional but not accesible because I could't find a good free hosting service for MySQL so I am working on a change to a Postgres database.)</span>
+            <br /> <span className="highlight"><a href="#contact">(Contact me for the secret url key!)</a></span>
         </span>
     );
 

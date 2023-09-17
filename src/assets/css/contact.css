@@ -165,6 +165,13 @@
     }
 }
 
+@media (min-width: 1000px){
+    .world{
+        width: 30em;
+    }
+
+}
+
 
 @media (max-width: 990px){
 
