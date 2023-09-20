@@ -28,7 +28,7 @@ export default function Projects() {
     const toolsBammbao = ["HTML", "CSS", "Bootstrap", "EJS", "Node.js", "Express.js", "MySQL", "Vite" ];
     
     const linkPortfolio = "https://danthenoodleman.github.io/react-portfolio/";
-    const linkBammbao = "https://bammbao.netlify.app/";
+    const linkBammbao = "https://bammbao.up.railway.app/";
 
     useAnimateOnScroll(".drop-in-anim", { animationClass: "drop-in" });
     useAnimateOnScroll(".drop-in-anim-2", { animationClass: "drop-in-2" });
