@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/css/projects.css";
-import bammbao from "../assets/bammbao.png";
-import portfolio from "../assets/portfolio.png";
+import bammbao from "../assets/bammbao.webp";
+import portfolio from "../assets/portfolio.webp";
 import Card from "./Card";
 import useAnimateOnScroll from "./useAnimateOnScroll";
 

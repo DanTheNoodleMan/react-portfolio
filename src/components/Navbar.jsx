@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../assets/css/navbar.css";
-import profile from "../assets/sexy1.jpg";
+import profile from "../assets/Resize_sexy1.webp";
 import { IoLogoGithub } from "react-icons/io5";
 import { IoLogoLinkedin } from "react-icons/io5";
 

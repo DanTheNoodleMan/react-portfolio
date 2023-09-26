@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/css/home.css";
 import Lottie from "lottie-react";
-import profile from "../assets/sexy1.jpg";
+import profile from "../assets/Resize_sexy1.webp";
 
 import { IoLogoHtml5 } from "react-icons/io5";
 import { IoLogoCss3 } from "react-icons/io5";
