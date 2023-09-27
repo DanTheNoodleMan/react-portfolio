@@ -146,6 +146,7 @@ const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
                             </a>
                         </li>
                     </ul>
+                    <p style={{opacity:0.2}}><a href="https://www.freepik.com/free-photo/liquid-marbling-paint-texture-background-fluid-painting-abstract-texture-intensive-color-mix-wallpaper_22147857.htm#query=purple%20background&position=16&from_view=search&track=ais">Images by benzoix</a> on Freepik</p>
                 </footer>
             </div>
         </>
