@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import "../assets/css/navbar.css";
 import profile from "../assets/Resize_sexy1.webp";
-import { IoLogoGithub } from "react-icons/io5";
-import { IoLogoLinkedin } from "react-icons/io5";
+import {IoLogoGithub} from "react-icons/io5";
+import {IoLogoLinkedin} from "react-icons/io5";
 
-const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
+const Navbar = ({isSidebarOpen, toggleSidebar, isMobile}) => {
     const navLinks = [
-        { id: "home", label: "Home" },
-        { id: "about", label: "About" },
-        { id: "projects", label: "Projects" },
-        { id: "contact", label: "Contact" },
+        {id: "home", label: "Home"},
+        {id: "about", label: "About"},
+        {id: "projects", label: "Projects"},
+        {id: "contact", label: "Contact"},
     ];
 
     const [activeLink, setActiveLink] = useState(navLinks[0].id); //Set initial value active, so that the first link is active on page load (Home)
@@ -31,16 +31,13 @@ const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
         const sectionElements = document.querySelectorAll("section");
         sectionElements.forEach((sectionElement) => {
             const rect = sectionElement.getBoundingClientRect();
-            if (
-                rect.top <= window.innerHeight / 2 &&
-                rect.bottom >= window.innerHeight / 2
-            ) {
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
                 setActiveLink(sectionElement.id);
             }
         });
     };
 
-    const debouncedHandleScroll = debounce(handleScroll, 50); 
+    const debouncedHandleScroll = debounce(handleScroll, 50);
 
     /* Make sidebar update active link based on scroll position */
     useEffect(() => {
@@ -54,12 +51,7 @@ const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
     return (
         <>
             {isMobile && (
-                <button
-                    className={`toggle-button ${
-                        isSidebarOpen ? "offcanvas" : ""
-                    }`}
-                    onClick={toggleSidebar}
-                >
+                <button className={`toggle-button ${isSidebarOpen ? "offcanvas" : ""}`} onClick={toggleSidebar}>
                     <p>Menu</p>
                     <svg
                         strokeWidth="4"
@@ -67,22 +59,13 @@ const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
                         viewBox="0 0 24 24"
                         fill="none"
                         className="h-6 w-6"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinejoin="round"
-                            strokeLinecap="round"
-                        ></path>
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinejoin="round" strokeLinecap="round"></path>
                     </svg>
                 </button>
             )}
 
-            <div
-                className={`slide-in sidebar ${
-                    isSidebarOpen ? "open" : "close"
-                }`}
-            >
+            <div className={`slide-in sidebar ${isSidebarOpen ? "open" : "close"}`}>
                 <nav>
                     <div className="photo-section">
                         <img src={profile} alt="profile" />
@@ -93,18 +76,9 @@ const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
                         {navLinks.map((navLink) => (
                             <li key={navLink.id}>
                                 <a
-                                    className={`link ${
-                                        activeLink === navLink.id
-                                            ? "active"
-                                            : ""
-                                    }`}
+                                    className={`link ${activeLink === navLink.id ? "active" : ""}`}
                                     href={`#${navLink.id}`}
-                                    onClick={
-                                        isSidebarOpen && isMobile
-                                            ? toggleSidebar
-                                            : undefined
-                                    }
-                                >
+                                    onClick={isSidebarOpen && isMobile ? toggleSidebar : undefined}>
                                     {navLink.label}
                                 </a>
                             </li>
@@ -114,39 +88,30 @@ const Navbar = ({ isSidebarOpen, toggleSidebar, isMobile }) => {
                 <footer>
                     <p>
                         <small>
-                            © Copyright
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script>
-                            2023 All rights reserved | Made with love by &nbsp;
-                            <a
-                                className="link"
-                                href="https://colorlib.com"
-                                target="_blank"
-                            >
+                            Made with love by &nbsp;
+                            <a className="link" href="https://colorlib.com" target="_blank">
                                 Daniel Robertson
                             </a>
                         </small>
                     </p>
                     <ul>
                         <li>
-                            <a
-                                href="https://github.com/DanTheNoodleMan"
-                                className="footer-links"
-                            >
+                            <a href="https://github.com/DanTheNoodleMan" className="footer-links">
                                 <IoLogoGithub />
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="https://www.linkedin.com/in/daniel-r-robertson/"
-                                className="footer-links"
-                            >
+                            <a href="https://www.linkedin.com/in/daniel-r-robertson/" className="footer-links">
                                 <IoLogoLinkedin />
                             </a>
                         </li>
                     </ul>
-                    <p style={{opacity:0.2}}><a href="https://www.freepik.com/free-photo/liquid-marbling-paint-texture-background-fluid-painting-abstract-texture-intensive-color-mix-wallpaper_22147857.htm#query=purple%20background&position=16&from_view=search&track=ais">Images by benzoix</a> on Freepik</p>
+                    <p style={{opacity: 0.2}}>
+                        <a href="https://www.freepik.com/free-photo/liquid-marbling-paint-texture-background-fluid-painting-abstract-texture-intensive-color-mix-wallpaper_22147857.htm#query=purple%20background&position=16&from_view=search&track=ais">
+                            Images by benzoix
+                        </a>{" "}
+                        on Freepik
+                    </p>
                 </footer>
             </div>
         </>
