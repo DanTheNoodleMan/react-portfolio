@@ -169,7 +169,7 @@ export default function Contact() {
 					<div className="footer-content">
 						<div className="footer-left">
 							<h3>Daniel Robertson</h3>
-							<p>Fullstack Developer crafting digital experiences from Osaka, Japan</p>
+							<p>Fullstack Developer trying to make cool things from around the world</p>
 						</div>
 						<div className="footer-right">
 							<p>© 2025 Daniel Robertson. Built with React and ambition</p>
