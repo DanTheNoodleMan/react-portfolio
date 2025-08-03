@@ -7,11 +7,11 @@ import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
 export default function About() {
 	const skills = [
 		{ icon: FaCode, name: "Frontend", techs: ["React", "Next.js", "TypeScript", "Tailwind"] },
-		{ icon: FaServer, name: "Backend", techs: ["Node.js", "Express.js", "Java"] },
+		{ icon: FaServer, name: "Backend", techs: ["Node.js", "Express.js",] },
 		{ icon: FaDatabase, name: "Database", techs: ["SQL", "Supabase"] },
 		{ icon: FaPalette, name: "Design", techs: ["Figma", "UI/UX"] },
 		{ icon: FaGamepad, name: "Game Dev", techs: ["Unity", "C#", "Game Design"] },
-		{ icon: FaGlobe, name: "Other", techs: ["Git", "API Design", "Deployment"] },
+		{ icon: FaGlobe, name: "Other", techs: ["SEO", "Git", "API Design", "Deployment"] },
 	];
 
 	useAnimateOnScroll(".drop-in-anim", { animationClass: "drop-in", delay: 300 });

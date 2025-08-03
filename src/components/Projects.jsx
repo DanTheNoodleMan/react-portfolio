@@ -6,111 +6,185 @@ import portfolio from "../assets/portfolio.webp";
 import aforani from "../assets/aforani.webp";
 import Card from "./Card";
 import useAnimateOnScroll from "./useAnimateOnScroll";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { BiRocket } from "react-icons/bi";
 
 export default function Projects() {
-    const altMixoligy = "Mixoligy Website Image";
-    const altBammbao = "Bammbao Wesbite Image";
-    const altPortfolio = "Portfolio Website Image";
-    const altPizza = "Category Game Website Image";
+    const projects = [
+        {
+            id: "mixoligy",
+            title: "Mixoligy",
+            category: "Web App",
+            description: "A premier DeFi platform featuring DEX aggregator, bridge, and portfolio tracker. Built with Next.js and TailwindCSS with Server Components backend.",
+            image: mixoligy,
+            technologies: ["NextJs", "TailwindCSS", "Server Components", "Node.js"],
+            link: "https://www.mixoligy.io/",
+            github: null, // Private repo
+            featured: true,
+            status: "Live"
+        },
+        {
+            id: "bammbao",
+            title: "Bammbao",
+            category: "Restaurant Website",
+            description: "Dynamic restaurant website with RESTful API-powered menu system. Owner can update menu content via secure admin panel.",
+            image: bammbao,
+            technologies: ["HTML", "CSS", "Bootstrap", "EJS", "Node.js", "Express.js", "MySQL", "Vite"],
+            link: "https://bammbao.up.railway.app/",
+            github: null, // Private for client
+            featured: true,
+            status: "Live"
+        },
+        {
+            id: "aforani",
+            title: "A for Ani",
+            category: "Multiplayer Game",
+            description: "Real-time online multiplayer game inspired by 'P for Pizza'. Features live communication using Socket.io with React frontend and Node.js backend.",
+            image: aforani,
+            technologies: ["CSS", "React", "Node.js", "Express.js", "Socket.io"],
+            link: "https://a-for-ani.netlify.app/",
+            github: "https://github.com/DanTheNoodleMan/a-for-ani",
+            featured: false,
+            status: "Beta"
+        },
+        {
+            id: "portfolio",
+            title: "Portfolio",
+            category: "Personal Website",
+            description: "This portfolio website showcasing React skills and responsive design. Features interactive animations and optimized performance.",
+            image: portfolio,
+            technologies: ["CSS", "React", "Javascript", "Vite"],
+            link: "https://ctrlaltdan.live/",
+            github: "https://github.com/DanTheNoodleMan/react-portfolio",
+            featured: false,
+            status: "Live"
+        },
+        {
+            id: "new-project",
+            title: "Your Project Here",
+            category: "Let's Build Something",
+            description: "I'm always excited to work on new challenges. Whether it's a web app, landing page, or something completely different - let's create something amazing together.",
+            image: null,
+            technologies: ["Your Vision", "My Creativity", "Your Ideas"],
+            link: "#contact",
+            github: null,
+            featured: false,
+            status: "Ready to Start",
+            isPlaceholder: true
+        }
+    ];
 
-    const mixoligyTitle = "Mixoligy";
-    const portfolioTitle = "Portfolio";
-    const bammbaoTitle = "Bammbao";
-    const aforaniTitle = "A for Ani";
+    useAnimateOnScroll(".drop-in-anim", { animationClass: "drop-in" });
+    useAnimateOnScroll(".slide-anim", { animationClass: "slide-in-r-2", delay: 150 });
+    useAnimateOnScroll(".scroll-reveal", { animationClass: "scroll-reveal", delay: 100 });
 
-    const portfolioDescription =
-        "My portfolio website is as a showcase of my abilities with React. Throughout its development, I delved into React's intricate concepts and gained a solid grasp of its core principles. Hosted on Github Pages using Actions, this static website exhibits my skills and projects as well as reflects the valuable knowledge I acquired while using many different development tools. It exemplifies my ability to create responsive and optimized web solutions, catering seamlessly to both mobile and desktop users.";
-
-    const mixoligyDescription = (
-        <span>
-            Mixoligy is a new premier DeFi platform that I am currently developing. The main features of the platform
-            include a DEX aggregator, a bridge, a portfolio tracker, and more to come. The platform is built using
-            NextJs and TailwindCSS for the frontend and Server Components for the backend. The platform is currently in
-            development and I am working on adding more features and improving the user experience, but for now you can
-            check out the landing page now!
-        </span>
-    );
-    const bammbaoDescription = (
-        <span>
-            Bammbao is a website that I developed for a local restaurant featuring a dynamic menu powered by a RESTful
-            API. The owner of the restaurant can dynamically change the contents of the menu with a secret url key I've
-            given them. This project provided me with valuable experience handling intricate data integrations resulting
-            in a seamlessly dynamic menu system, as well as developing a logical URI schema. With a mobile-first
-            approach I honed my skills in optimizing user experiences across different devices, ensuring that the
-            website performs well on both mobile and desktop.
-            <br />{" "}
-            <span className="highlight">
-                <a href="#contact">(Contact me for the secret url key!)</a>
-            </span>
-        </span>
-    );
-
-    const aforaniDescription = (
-        <span>
-            A for Ani is an realtime online multiplyer game inspired by the boardgame{" "}
-            <a className="shine" href="https://bigpotato.co.uk/products/p-for-pizza">
-                P for Pizza by Big Potato Games
-            </a>
-            . The game is played in real time with other players and leverages Socket.io to facilitate realtime
-            client-server communication. The game is built with a React frontend and a Node.js backend with Express.js
-            and Socket.io, which are hosted on Netlify and Railway, respectively. The game is currently in development
-            and I am working on adding more features and improving the user experience, but for now you can try it out
-            now!
-        </span>
-    );
-
-    const toolsMixoligy = ["NextJs", "TailwindCSS", "Server Components", "Node.js"];
-    const toolsPortfolio = ["CSS", "React", "Javascript", "Vite"];
-    const toolsBammbao = ["HTML", "CSS", "Bootstrap", "EJS", "Node.js", "Express.js", "MySQL", "Vite"];
-    const toolsAforani = ["CSS", "React", "Node.js", "Express.js", "Socket.io"];
-
-    const linkMixoligy = "https://www.mixoligy.io/";
-    const linkPortfolio = "https://danthenoodleman.github.io/react-portfolio/";
-    const linkBammbao = "https://bammbao.up.railway.app/";
-    const linkAforani = "https://a-for-ani.netlify.app/";
-
-    useAnimateOnScroll(".drop-in-anim", {animationClass: "drop-in"});
-    useAnimateOnScroll(".drop-in-anim-2", {animationClass: "drop-in-2"});
+    const featuredProjects = projects.filter(p => p.featured);
+    const otherProjects = projects.filter(p => !p.featured);
 
     return (
         <section id="projects">
-            <div className="hero-projects">
-                <h1 className="drop-in-anim">
-                    <span className="shine">Projects</span>
-                </h1>
-                <div className="project-grid">
-                    <Card
-                        imageSrc={mixoligy}
-                        altD={altMixoligy}
-                        title={mixoligyTitle}
-                        description={mixoligyDescription}
-                        tools={toolsMixoligy}
-                        link={linkMixoligy}
-                    />
-                    <Card
-                        imageSrc={portfolio}
-                        altD={altPortfolio}
-                        title={portfolioTitle}
-                        description={portfolioDescription}
-                        tools={toolsPortfolio}
-                        link={linkPortfolio}
-                    />
-                    <Card
-                        imageSrc={bammbao}
-                        altD={altBammbao}
-                        title={bammbaoTitle}
-                        description={bammbaoDescription}
-                        tools={toolsBammbao}
-                        link={linkBammbao}
-                    />
-                    <Card
-                        imageSrc={aforani}
-                        altD={altPizza}
-                        title={aforaniTitle}
-                        description={aforaniDescription}
-                        tools={toolsAforani}
-                        link={linkAforani}
-                    />
+            <div className="projects-container">
+                <h1 className="shine drop-in-anim">Projects</h1>
+                
+                {/* Featured Projects */}
+                <div className="featured-section">
+                    <h2 className="section-subtitle slide-anim">Featured Work</h2>
+                    <div className="featured-grid">
+                        {featuredProjects.map((project, index) => (
+                            <div key={project.id} className="featured-project scroll-reveal" style={{ animationDelay: `${index * 200}ms` }}>
+                                <div className="project-image-container">
+                                    <img src={project.image} alt={project.title} className="project-image" />
+                                    <div className="project-overlay">
+                                        <div className="project-links">
+                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                                                <FiExternalLink />
+                                            </a>
+                                            {project.github && (
+                                                <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                                                    <FiGithub />
+                                                </a>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="project-info">
+                                    <div className="project-header">
+                                        <h3 className="project-title">{project.title}</h3>
+                                        <span className={`project-status ${project.status.toLowerCase().replace(' ', '-')}`}>
+                                            {project.status}
+                                        </span>
+                                    </div>
+                                    <p className="project-category">{project.category}</p>
+                                    <p className="project-description">{project.description}</p>
+                                    <div className="project-technologies">
+                                        {project.technologies.map((tech) => (
+                                            <span key={tech} className="tech-badge">{tech}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Other Projects */}
+                <div className="other-projects-section">
+                    <h2 className="section-subtitle slide-anim">More Projects</h2>
+                    <div className="projects-grid">
+                        {otherProjects.map((project, index) => (
+                            <div key={project.id} className={`project-card scroll-reveal ${project.isPlaceholder ? 'placeholder-card' : ''}`} style={{ animationDelay: `${index * 150}ms` }}>
+                                {project.isPlaceholder ? (
+                                    <div className="placeholder-content">
+                                        <BiRocket className="placeholder-icon" />
+                                        <h3 className="project-title">{project.title}</h3>
+                                        <p className="project-category">{project.category}</p>
+                                        <p className="project-description">{project.description}</p>
+                                        <div className="project-technologies">
+                                            {project.technologies.map((tech) => (
+                                                <span key={tech} className="tech-badge">{tech}</span>
+                                            ))}
+                                        </div>
+                                        <a href={project.link} className="cta-link">
+                                            Let's discuss your project
+                                        </a>
+                                    </div>
+                                ) : (
+                                    <>
+                                        <div className="project-image-container">
+                                            <img src={project.image} alt={project.title} className="project-image" />
+                                            <div className="project-overlay">
+                                                <div className="project-links">
+                                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                                                        <FiExternalLink />
+                                                    </a>
+                                                    {project.github && (
+                                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                                                            <FiGithub />
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="project-info">
+                                            <div className="project-header">
+                                                <h3 className="project-title">{project.title}</h3>
+                                                <span className={`project-status ${project.status.toLowerCase().replace(' ', '-')}`}>
+                                                    {project.status}
+                                                </span>
+                                            </div>
+                                            <p className="project-category">{project.category}</p>
+                                            <p className="project-description">{project.description}</p>
+                                            <div className="project-technologies">
+                                                {project.technologies.map((tech) => (
+                                                    <span key={tech} className="tech-badge">{tech}</span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

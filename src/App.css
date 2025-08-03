@@ -62,6 +62,10 @@
         width: 100%;
         background-position: 660px;
     }
+
+    .blur-buffer, .blur-buffer-2{
+        display: none;
+    }
 }
 
 
