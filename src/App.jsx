@@ -7,112 +7,89 @@ import Contact from "./components/Contact";
 import TrailerAnimation from "./components/TrailerAnim"; // Import the TrailerAnimation component
 import "./App.css";
 
+import "./assets/css/enhanced-animations.css";
+import { initAllEnhancements } from "./utils/enhanced-interactions";
+
 function App() {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(
-        window.innerWidth >= 990
-    ); // Adjust the breakpoint as needed
+	const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth >= 990); // Adjust the breakpoint as needed
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 990);
+	const [isMobile, setIsMobile] = useState(window.innerWidth <= 990);
 
-    useEffect(() => {
-        // Add event listener to update isMobile state on window resize
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 990);
-        };
-        window.addEventListener("resize", handleResize);
+	useEffect(() => {
+		initAllEnhancements();
 
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
+		const handleResize = () => {
+			setIsMobile(window.innerWidth <= 990);
+		};
+		window.addEventListener("resize", handleResize);
 
-    // Toggle sidebar open/closed
-    const toggleSidebar = () => {
-        if (isSidebarOpen)
-            document
-                .querySelector(".main-container")
-                .classList.toggle("offcanvas");
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
 
-        setIsSidebarOpen(!isSidebarOpen);
-    };
+	// Toggle sidebar open/closed
+	const toggleSidebar = () => {
+		if (isSidebarOpen) document.querySelector(".main-container").classList.toggle("offcanvas");
 
-    // Update isSidebarOpen based on window width
-    const updateSidebarState = () => {
-        setIsSidebarOpen(window.innerWidth >= 990); // Adjust the breakpoint as needed
-    };
+		setIsSidebarOpen(!isSidebarOpen);
+	};
 
-    // Add resize event listener to update sidebar state on window resize
-    useEffect(() => {
-        window.addEventListener("resize", updateSidebarState);
-        return () => {
-            window.removeEventListener("resize", updateSidebarState);
-        };
-    }, []);
+	// Update isSidebarOpen based on window width
+	const updateSidebarState = () => {
+		setIsSidebarOpen(window.innerWidth >= 990); // Adjust the breakpoint as needed
+	};
 
-    const trailerStyles = {
-        height: "400px",
-        width: "400px",
-        backgroundColor: "var(--purple-1)",
-        borderRadius: "50%",
+	// Add resize event listener to update sidebar state on window resize
+	useEffect(() => {
+		window.addEventListener("resize", updateSidebarState);
+		return () => {
+			window.removeEventListener("resize", updateSidebarState);
+		};
+	}, []);
 
-        position: "fixed",
-        left: "0px",
-        top: "0px",
-        zIndex: 1000,
+	const trailerStyles = {
+		height: "100px",
+		width: "100px",
+		backgroundColor: "var(--green-1)",
+		borderRadius: "50%",
 
-        pointerEvents: "none",
-        opacity: 1,
-        transition: "opacity 500ms ease",
+		position: "fixed",
+		left: "0px",
+		top: "0px",
+		zIndex: 1000,
 
-        display: "grid",
-        placeItems: "center",
-        filter: "blur(22vmax)",
-    };
+		pointerEvents: "none",
+		opacity: 1,
+		transition: "opacity 500ms ease",
 
-    const iconStyles = {
-        fontSize: "6px",
-        lineHeight: "4px",
+		display: "grid",
+		placeItems: "center",
+		filter: "blur(10vmax)",
+	};
 
-        transition: "opacity 400ms ease",
-    };
+	const iconStyles = {
+		fontSize: "6px",
+		lineHeight: "4px",
 
-    return (
-        <div className={`App ${isSidebarOpen ? "sidebar-open" : ""}`}>
-            {!isMobile && (
-                <TrailerAnimation
-                    trailerStyles={trailerStyles}
-                    iconStyles={iconStyles}
-                />
-            )}
+		transition: "opacity 400ms ease",
+	};
 
-            <Navbar
-                isSidebarOpen={isSidebarOpen}
-                toggleSidebar={toggleSidebar}
-                isMobile={isMobile}
-            />
-            <main
-                className={`main-container ${
-                    isSidebarOpen && isMobile ? "offcanvas" : ""
-                }`}
-            >
-                <Home />
-                <div className="buffer">
-                    <div className="overlay"></div>
-                </div>
-                <div className="blur-buffer"></div>
-                <About />
-                <div className="blur-buffer-2"></div>
-                <div className="buffer buffer-2">
-                    <div className="overlay"></div>
-                </div>
-                <Projects />
-                <div className="buffer buffer-3">
-                    <div className="overlay"></div>
-                </div>
-                <Contact />
-            </main>
-        </div>
-    );
+	return (
+		<div className={`App ${isSidebarOpen ? "sidebar-open" : ""}`}>
+			{!isMobile && <TrailerAnimation trailerStyles={trailerStyles} iconStyles={iconStyles} />}
+
+			<Navbar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} isMobile={isMobile} />
+			<main className={`main-container ${isSidebarOpen && isMobile ? "offcanvas" : ""}`}>
+				<Home />
+				<div className="blur-buffer"></div>
+				<About />
+				<div className="blur-buffer-2"></div>
+				<Projects />
+				<Contact />
+			</main>
+		</div>
+	);
 }
 
 export default App;
