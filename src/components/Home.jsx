@@ -3,18 +3,10 @@ import "../assets/css/home.css";
 import Lottie from "lottie-react";
 import profile from "../assets/dan.webp";
 
-import { IoLogoHtml5 } from "react-icons/io5";
-import { IoLogoCss3 } from "react-icons/io5";
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiTypescript } from "react-icons/si";
-import { IoLogoNodejs } from "react-icons/io5";
-import { FaJava } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
-import { IoLogoReact } from "react-icons/io5";
-import { SiMysql } from "react-icons/si";
-import { SiSqlite } from "react-icons/si";
+import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoNodejs, IoLogoReact } from "react-icons/io5";
+import { SiTypescript, SiJavascript, SiExpress, SiMysql, SiSqlite, SiPostgresql, SiTailwindcss, SiLunacy } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiPostgresql } from "react-icons/si";
+import { FaUnity } from "react-icons/fa6";
 import scrollDown from "../../src/assets/scrollDown.json";
 
 // Floating Particles Component
@@ -99,6 +91,14 @@ export default function Home() {
 							<span className="tech-tooltip">CSS3</span>
 						</li>
 						<li className="magnetic tech-icon">
+							<SiTailwindcss />
+							<span className="tech-tooltip">Tailwind</span>
+						</li>
+						<li className="magnetic tech-icon">
+							<SiJavascript />
+							<span className="tech-tooltip">JavaScript</span>
+						</li>
+						<li className="magnetic tech-icon">
 							<SiTypescript />
 							<span className="tech-tooltip">TypeScript</span>
 						</li>
@@ -115,10 +115,6 @@ export default function Home() {
 							<span className="tech-tooltip">Node.js</span>
 						</li>
 						<li className="magnetic tech-icon">
-							<FaJava />
-							<span className="tech-tooltip">Java</span>
-						</li>
-						<li className="magnetic tech-icon">
 							<SiExpress />
 							<span className="tech-tooltip">Express.js</span>
 						</li>
@@ -131,8 +127,12 @@ export default function Home() {
 							<span className="tech-tooltip">PostgreSQL</span>
 						</li>
 						<li className="magnetic tech-icon">
-							<SiSqlite />
-							<span className="tech-tooltip">SQLite</span>
+							<FaUnity />
+							<span className="tech-tooltip">Unity</span>
+						</li>
+						<li className="magnetic tech-icon">
+							<SiLunacy />
+							<span className="tech-tooltip">Unity</span>
 						</li>
 					</ul>
 				</div>

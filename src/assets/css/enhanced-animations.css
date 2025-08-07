@@ -331,3 +331,25 @@
 		transform: none;
 	}
 }
+
+.slide-anim-1, .drop-in-anim, .slide-anim, .scroll-reveal {
+    visibility: visible !important;
+    opacity: 1;
+}
+
+@media (max-width: 990px) {
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+    
+    /* Optimize animations for mobile */
+    .slide-in-r, .slide-in-r-2, .drop-in, .drop-in-2, .drop-in-3, .fade-in {
+        will-change: transform, opacity;
+        transform: translateZ(0); /* Force hardware acceleration */
+    }
+}

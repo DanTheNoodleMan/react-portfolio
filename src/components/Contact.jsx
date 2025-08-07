@@ -94,12 +94,8 @@ export default function Contact() {
 								</div>
 							</div>
 							<div className="form-field">
-								<input type="text" id="subject" name="subject" placeholder=" " />
-								<label htmlFor="subject">Project Type</label>
-							</div>
-							<div className="form-field">
 								<textarea id="message" name="message" rows={6} placeholder=" " required />
-								<label htmlFor="message">Tell me about your project</label>
+								<label htmlFor="message">What you want to discuss</label>
 							</div>
 							<button type="submit" className="submit-btn magnetic">
 								<FiMail />
@@ -143,10 +139,6 @@ export default function Contact() {
 								>
 									<IoLogoLinkedin />
 									<span>LinkedIn</span>
-								</a>
-								<a href="#" className="social-link magnetic">
-									<SiDiscord />
-									<span>Discord</span>
 								</a>
 							</div>
 						</div>
