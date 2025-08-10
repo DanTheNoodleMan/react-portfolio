@@ -4,7 +4,6 @@ import emailjs from "@emailjs/browser";
 import useAnimateOnScroll from "./useAnimateOnScroll";
 import { FiMail, FiMapPin, FiClock, FiMessageCircle } from "react-icons/fi";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
-import { SiDiscord } from "react-icons/si";
 
 export default function Contact() {
 	const form = useRef();
@@ -64,7 +63,7 @@ export default function Contact() {
 		"API Development",
 		"Game Development",
 		"UI/UX Consulting",
-        "Website SEO"
+		"Website SEO",
 	];
 
 	return (
@@ -119,7 +118,7 @@ export default function Contact() {
 							))}
 						</div>
 
-						<div className="social-links scroll-reveal">
+						<div className="socials scroll-reveal">
 							<h3>Connect With Me</h3>
 							<div className="social-grid">
 								<a
@@ -129,7 +128,6 @@ export default function Contact() {
 									className="social-link magnetic"
 								>
 									<IoLogoGithub />
-									<span>GitHub</span>
 								</a>
 								<a
 									href="https://www.linkedin.com/in/daniel-r-robertson/"
@@ -138,7 +136,6 @@ export default function Contact() {
 									className="social-link magnetic"
 								>
 									<IoLogoLinkedin />
-									<span>LinkedIn</span>
 								</a>
 							</div>
 						</div>
